@@ -10,15 +10,15 @@ class Cells
             celulas_vivas += grid[i - a][j - b]
         end
         end
-        celulas_vivas -= grid[i][j]
-        if grid[i][j] == 1 && celulas_vivas < 2
-        grid2[i][j] = 0
-        elsif grid[i][j] == 1 && celulas_vivas > 3
-        grid2[i][j] = 0
-        elsif grid[i][j].zero? && celulas_vivas == 3
-        grid2[i][j] = 1
+        celulas_vivas -= $grid[i][j]
+        if $grid[i][j] == 1 && celulas_vivas < 2
+        $grid2[i][j] = 0
+        elsif $grid[i][j] == 1 && celulas_vivas > 3
+        $grid2[i][j] = 0
+        elsif $grid[i][j].zero? && celulas_vivas == 3
+        $grid2[i][j] = 1
         else
-        grid2[i][j] = grid[i][j]
+        $grid2[i][j] = $grid[i][j]
         end
       end
     end
